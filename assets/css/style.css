@@ -1,0 +1,14 @@
+.col-lg-3, .col-sm-6 {
+    padding-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+    .row {
+        margin-right: 8rem;
+        margin-left: 8rem;
+    }
+}
+
+#header {
+    height: 10rem;
+}
