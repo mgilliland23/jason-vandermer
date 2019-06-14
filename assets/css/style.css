@@ -2,28 +2,29 @@ html, .container-fluid {
     background-color: black;
     color: white;
     font-family: 'Helvetica', sans-serif;
+    max-width: 100%;
 }
 
 h1 {
-    letter-spacing: 1.5rem;
+    letter-spacing: 1vw;
 }
 
 h2 {
-    letter-spacing: .5rem;
+    letter-spacing: .3vw;
 }
 
 #header {
-    height: 8rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    height: 8vw;
+    margin-top: 3vw;
+    margin-bottom: 2vw;
 }
 
 #middle-dot {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 #job-title {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 p {
