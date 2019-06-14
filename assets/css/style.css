@@ -1,14 +1,47 @@
-.col-lg-3, .col-sm-6 {
-    padding-bottom: 3rem;
+html, .container-fluid {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+    letter-spacing: 1.5rem;
+}
+
+h2 {
+    letter-spacing: .5rem;
+}
+
+#header {
+    height: 8rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+#middle-dot {
+    font-size: 1.5rem;
+}
+
+#job-title {
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-align: left !important;
+    margin-left: 5px;
+    color: black;
+}
+
+.row {
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 @media (min-width: 1200px) {
     .row {
-        margin-right: 8rem;
-        margin-left: 8rem;
+        margin-right: 14rem;
+        margin-left: 14rem;
     }
-}
-
-#header {
-    height: 10rem;
 }
