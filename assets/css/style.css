@@ -14,12 +14,6 @@ h3 {
     padding-top: .5vh;
 }
 
-#header {
-    height: 8vw;
-    padding-top: 3vh;
-    padding-bottom: 2vh;
-}
-
 p {
     margin: 0;
     padding: 0;
@@ -33,7 +27,12 @@ p {
     margin-left: 20px;
 }
 
-@media (min-width: 1200px) {
+.modal-body {
+    padding: 0;
+    background-color: black;
+}
+
+@media (min-width: 1024px) {
     .row {
         margin-right: 14rem;
         margin-left: 14rem;
@@ -42,9 +41,9 @@ p {
 
 @media ( max-width: 480px) {
     h1 {
-        font-size: 4vh;
+        font-size: 7vw;
     }
     h3 {
-        font-size: 2.5vh;
+        font-size: 6vw;
     }
 }

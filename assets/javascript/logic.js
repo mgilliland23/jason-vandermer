@@ -1,11 +1,10 @@
 var img = document.getElementsByTagName("img");
 
-console.log(img);
-
-
+//Add hover and click event listeners to all the video preview images
 for (var i = 0; i < img.length; i++) {
     img[i].addEventListener("mouseover", enterHover);
     img[i].addEventListener("mouseout", exitHover);
+    img[i].addEventListener("click", displayVideo);
 };
 
 function enterHover() {
@@ -27,4 +26,13 @@ function exitHover() {
 
     director.style.color = "black";
     info.style.color = "black";
+}
+
+function displayVideo() {
+    //var vimeoVideo = document.getElementById('modal-video');
+
+    //vimeoVideo.src = "";
+
+    $("#vimeoModal").modal();
+
 }
