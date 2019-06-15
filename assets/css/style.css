@@ -9,8 +9,9 @@ h1 {
     letter-spacing: 1vw;
 }
 
-h2 {
+h3 {
     letter-spacing: .3vw;
+    padding-top: .5vh;
 }
 
 #header {
