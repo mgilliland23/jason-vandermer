@@ -7,6 +7,7 @@ for (var i = 0; i < img.length; i++) {
     img[i].addEventListener("click", displayVideo);
 };
 
+//Display the text for the video being hovered over
 function enterHover() {
     console.log("enter")
     var currentVideoContainer = event.target.parentElement;
@@ -18,22 +19,32 @@ function enterHover() {
     info.style.color = "white";
 }
 
+//Hide the text when it is no longer being hovered over
 function exitHover() {
     var currentVideoContainer = event.target.parentElement;
 
     var director = currentVideoContainer.getElementsByClassName('director')[0];
     var info = currentVideoContainer.getElementsByClassName('info')[0];
 
-    director.style.color = 'black';
-    info.style.color = 'black';
+    director.style.color = "black";
+    info.style.color = "black";
 }
 
+//Inject the videos url into the modal and then fire the modal
 function displayVideo() {
     var videoPreviewImg = event.target;
     var videoURL = videoPreviewImg.getAttribute('data-videoURL');
 
-    var modalVideo = document.getElementById('video-player');
-    modalVideo.src = videoURL;
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute('src', videoURL);
+    iframe.setAttribute('style', "position:absolute;top:0;left:0;width:100%;height:100%;");
+    iframe.setAttribute('frameborder', 0);
+    iframe.setAttribute('allow', "autoplay; fullscreen");
+    iframe.setAttribute('allowfullscreen', "true");
+
+    var iframeContainer = document.getElementById('iframe-container');
+
+    iframeContainer.appendChild(iframe);
 
     $("#vimeo-modal").modal();
 
