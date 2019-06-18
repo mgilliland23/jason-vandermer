@@ -11,8 +11,8 @@ function enterHover() {
     console.log("enter")
     var currentVideoContainer = event.target.parentElement;
 
-    var director = currentVideoContainer.getElementsByClassName("director")[0];
-    var info = currentVideoContainer.getElementsByClassName("info")[0];
+    var director = currentVideoContainer.getElementsByClassName('director')[0];
+    var info = currentVideoContainer.getElementsByClassName('info')[0];
 
     director.style.color = "white";
     info.style.color = "white";

@@ -31,6 +31,8 @@ p {
     position: sticky;
     top: 0;
     background-color: black;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 
 #video-grid {
@@ -52,5 +54,9 @@ p {
     }
     h3 {
         font-size: 6vw;
+    }
+    #header {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
 }
