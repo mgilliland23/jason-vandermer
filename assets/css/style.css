@@ -1,7 +1,7 @@
 html, .container-fluid {
     background-color: black;
     color: white;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     max-width: 100%;
 }
 
@@ -22,22 +22,29 @@ p {
     color: black;
 }
 
-.row {
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
 .modal-body {
     padding: 0;
     background-color: black;
 }
 
-@media (min-width: 1024px) {
-    .row {
-        margin-right: 14rem;
-        margin-left: 14rem;
-    }
+#header {
+    position: sticky;
+    top: 0;
+    background-color: black;
 }
+
+#video-grid {
+    width: 72%;
+    margin: 0 auto;
+}
+
+.modal-dialog {
+    min-width: 72%;
+    max-height: 100vh - 200px;
+    margin-top: 70px;
+}
+
+@media (min-width: 1440px) {}
 
 @media ( max-width: 480px) {
     h1 {

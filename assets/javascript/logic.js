@@ -29,10 +29,14 @@ function exitHover() {
 }
 
 function displayVideo() {
-    //var vimeoVideo = document.getElementById('modal-video');
+    var videoPreviewImg = event.target;
+    var videoURL = videoPreviewImg.getAttribute("data-videoURL");
 
-    //vimeoVideo.src = "";
 
-    $("#vimeoModal").modal();
+    var modalVideo = document.getElementById('video-player');
+
+    modalVideo.src = videoURL;
+
+    $("#vimeo-modal").modal();
 
 }
