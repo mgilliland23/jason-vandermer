@@ -26,8 +26,8 @@ function exitHover() {
     var director = currentVideoContainer.getElementsByClassName('director')[0];
     var info = currentVideoContainer.getElementsByClassName('info')[0];
 
-    director.style.color = "black";
-    info.style.color = "black";
+    director.style.color = "rgb(23,23,23)";
+    info.style.color = "rgb(23,23,23)";
 }
 
 //Inject the videos url into the modal and then fire the modal

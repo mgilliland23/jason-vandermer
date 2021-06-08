@@ -1,5 +1,5 @@
 html, .container-fluid {
-    background-color: black;
+    background-color: #171717;
     color: white;
     font-family: 'Noto Sans', sans-serif;
     max-width: 100%;
@@ -19,36 +19,47 @@ p {
     padding: 0;
     text-align: left !important;
     margin-left: 5px;
-    color: black;
+    color: #171717;
 }
 
 .modal-body {
     padding: 0;
-    background-color: black;
+    background-color: #171717;
 }
 
 #header {
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: #171717;
     padding-top: 4rem;
     padding-bottom: 3rem;
 }
 
 #video-grid {
-    width: 72%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .modal-dialog {
-    min-width: 72%;
+    min-width: 80%;
     max-height: 100vh - 200px;
     margin-top: 70px;
 }
 
-@media (min-width: 1440px) {}
 
-@media ( max-width: 480px) {
+@media (max-width: 1440px) {
+    #video-grid{
+        width: 90%
+    }
+    .modal-dialog {
+        min-width: 90%;
+    }
+}
+
+
+
+
+@media ( max-width: 720px) {
     h1 {
         font-size: 7vw;
     }
