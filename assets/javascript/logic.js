@@ -1,5 +1,5 @@
 
-const videoList = [
+videoList = [
     { title: 'title1', video_id: 41986271 },
     { title: 'title2', video_id: 41986271 },
     { title: 'title3', video_id: 41986271 },
@@ -8,9 +8,9 @@ const videoList = [
     { title: 'title6', video_id: 41986271 },
 ]
 
+generateVideoGrid(loadVimeoDetails);
 
-console.log(videoList);
-$(document).ready(function () {
+function generateVideoGrid(callback) {
     var html = '';
     for (i = 0; i < videoList.length; i++) {
         if ((i % 4) == 0) {
@@ -21,22 +21,30 @@ $(document).ready(function () {
             }
         }
         html += '<div class="col-lg-3 col-sm-6 col-xs-12 text-center video-thumbnail mb-3">';
-        html += `<img class="img-fluid ` + i + `" alt="Bootstrap Image Preview" src=""
-                            data-videoURL="https://player.vimeo.com/video/`+ videoList[i].video_id + `?playsinline=0&title=0&byline=0&portrait=0&autoplay=1" />`;
-        html += '<p class="title ' + i + '"></p>';
+        html += `<img class="img-fluid ` + videoList[i].video_id + `" alt="Bootstrap Image Preview" src=""
+                        data-videoURL="https://player.vimeo.com/video/`+ videoList[i].video_id + `?playsinline=0&title=0&byline=0&portrait=0&autoplay=1" />`;
+        html += '<p class="title ' + videoList[i].video_id  + '"></p>';
         html += '</div>';
-
-        vimeo_details = getVimeoDetails(videoList[i].video_id, 'large', function (data) {
-            console.log(data);
-            console.log(data[0].title);
-            $('.title').text(data[0].title);
-            $('.img-fluid').attr('src', data[0].thumbnail_large);
-
-        });
-
     }
     html += '</div>';
     $('#video-grid').append(html);
+
+    callback();
+}
+// console.log(videoList);
+function loadVimeoDetails() {
+
+    for (var i = 0; i < videoList.length; i++) {
+        vimeo_details = getVimeoDetails(videoList[i].video_id, 'large', function (data) {
+            console.log(i);
+
+            console.log(data);
+            $('.title.' + data[0].id).text(data[0].title);
+            $('.img-fluid.'+ data[0].id).attr('src', data[0].thumbnail_large);
+
+        });
+    }
+
     var img = document.getElementsByTagName("img");
     //Add hover and click event listeners to all the video preview images
     for (var i = 0; i < img.length; i++) {
@@ -45,7 +53,7 @@ $(document).ready(function () {
         img[i].addEventListener("click", displayVideo);
     };
 
-});
+}
 
 
 function getVimeoDetails(video_id, size, callback) {
