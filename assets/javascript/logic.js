@@ -1,9 +1,7 @@
-
-videoList = [
-    { title: 'papyrus', video_id: 559688047 },
+videoList = [{ title: 'papyrus', video_id: 559688047 },
     { title: 'come back barrack', video_id: 559942220 },
     { title: 'the race', video_id: 559945885 },
-    { title: 'voters for trump', video_id: 559988691 },
+    { title: 'WHEREVER LIFE TAKE YOU', video_id: 560018749 },
     { title: 'wells for boys', video_id: 559975048 },
     { title: 'slow music video', video_id: 560921770 },
     { title: 'enhancement drug', video_id: 560020718 },
@@ -12,9 +10,9 @@ videoList = [
     { title: 'THE JAY Z STORY', video_id: 559966756 },
     { title: 'DIAGO CALLS HIS MOM', video_id: 560220016 },
     { title: 'CUSTOMER SERVICE', video_id: 559949778 },
-    { title: 'WHEREVER LIFE TAKE YOU', video_id: 560018749 },
-    { title: 'MACYS CHILDRENS COMMERCIAL', video_id: 559962142 },
-    { title: 'ROBBERS', video_id: 559688047 },
+    { title: 'voters for trump', video_id: 559988691 },
+    { title: 'MACYS CHILDRENS COMMERCIAL', video_id: 560912653 },
+    { title: 'ROBBERS', video_id: 559962142 },
     { title: 'POOL BOY', video_id: 559985759 },
     {title: 'THE STAND OFF.', video_id:  559990687},
     {title: 'A THANKSGIVING MIRACLE.', video_id: 560032859},
@@ -81,7 +79,7 @@ videoList = [
     {title: 'KUMAIL NANJIANI PROMO', video_id:  561412990},
     {title: 'KIDS.', video_id:  560262523},
     {title: 'MY DRUNK BOYFRIEND', video_id:    560254502},
-    {title: 'NATALIE PORTMAN PROMO', video_id:  561412990},
+    {title: 'NATALIE PORTMAN PROMO', video_id:  561389514},
     {title: 'BLACK WIDOW.', video_id: 560215454},
     {title: 'OPRAH.', video_id:  560192011},
     {title: 'TOTINOS 2.', video_id:   560243041},
@@ -128,7 +126,7 @@ function generateVideoGrid(callback) {
             }
         }
         html += '<div class="col-lg-3 col-sm-6 col-xs-12 text-center video-thumbnail mb-3">';
-        html += `<img class="img-fluid ` + videoList[i].video_id + `" alt="Bootstrap Image Preview" src=""
+        html += `<img class="img-fluid ` + videoList[i].video_id + `" alt="Bootstrap Image Preview" src="/assets/loading.png"
                         data-videoURL="https://player.vimeo.com/video/`+ videoList[i].video_id + `?playsinline=0&title=0&byline=0&portrait=0&autoplay=1" />`;
         html += '<p class="title ' + videoList[i].video_id  + '"></p>';
         html += '</div>';

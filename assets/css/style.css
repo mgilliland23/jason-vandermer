@@ -4,6 +4,13 @@ html, .container-fluid {
     font-family: 'Noto Sans', sans-serif;
     max-width: 100%;
 }
+a{
+    color: white;
+}
+
+a:hover{
+    color: white;
+}
 
 h1 {
     letter-spacing: 1vw;
@@ -32,27 +39,36 @@ p {
     top: 0;
     background-color: #171717;
     padding-top: 4rem;
-    padding-bottom: 3rem;
+    padding-bottom: .5rem;
 }
 
-#video-grid {
+#video-grid, .nav-container {
     width: 80%;
     margin: 0 auto;
 }
-
+.nav-container a{
+    margin-left: 1rem;
+}
 .modal-dialog {
-    min-width: 80%;
+    min-width: 70%;
     max-height: 100vh - 200px;
     margin-top: 70px;
 }
 
+.header-title-container{
+    display: flex;
+    flex-direction: column;
+}
 
+.nav-container{
+    text-align: right;
+}
 @media (max-width: 1440px) {
-    #video-grid{
+    #video-grid, .nav-container{
         width: 90%
     }
     .modal-dialog {
-        min-width: 90%;
+        /* min-width: 90%; */
     }
 }
 
@@ -72,5 +88,11 @@ p {
     }
     .title {
         color: white;
+    }
+    .nav-container{
+        font-size: 12px;
+        text-align: center;
+        margin-top: .5rem;
+        padding-bottom: .5rem;
     }
 }
